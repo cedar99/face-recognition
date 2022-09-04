@@ -24,7 +24,9 @@
 | EDSR | thermal | 23.9512  | 0.7507  |  EDSR_Lx4_f256b32_DIV2K_official | --- |
 | EDSR | rgb | 30.4859 | 0.8529 | EDSR_Mx4_f64b16_DIV2K_official | --- |
 | EDSR | rgb | 31.2785 | 0.8820 | sejongface_Mx4_f64b16 | --- |
+| EDSR | rgb | 31.2810 | 0.8820 | sejongface && div2k | --- |
 | EDSR | thermal | 24.0137 | 0.7747 | sejongface_Mx4_f64b16 | --- |
+| EDSR | thermal | 24.2811 | 0.7776 | sejongface && div2k | --- |
 
 
 
@@ -52,3 +54,5 @@ motivation：上述实验结果表明，直接使用DIV2k的训练模型进行�
 | --- | --- | --- | --- | --- |
 | InceptionResNetV1 | EDSR | 0.7366 | 0.9338 | sejongface |
 | MobileFaceNet| EDSR | 0.7412 | 0.9214 | sejonface |
+| InceptionResNetV1 | EDSR | 0.7487 | 0.9335 | sejongface + div2k |
+| MobileFaceNet| EDSR | 0.7489 | 0.9207 | sejonface + div2k |
