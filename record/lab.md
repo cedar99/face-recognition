@@ -27,6 +27,10 @@
 | EDSR | rgb | 31.2810 | 0.8820 | sejongface && div2k | --- |
 | EDSR | thermal | 24.0137 | 0.7747 | sejongface_Mx4_f64b16 | --- |
 | EDSR | thermal | 24.2811 | 0.7776 | sejongface && div2k | --- |
+| SwinIR | rgb | 31.2655 | 0.8818 | sejongface | --- |
+| SwinIR | thermal | 23.9281 | 0.7833 | sejongface | --- |
+
+为进一步探索超分模型对结果的影响。在这里使用两个经典的超分模型作为benchmark。然而，实验结果给出的结论是发现两个模型使用统一训练模型测试后的结果差别不大，因此，进一步分析是否预训练模型是否是决定结果好坏的重要影响因素之一呢？
 
 
 
@@ -56,3 +60,15 @@ motivation：上述实验结果表明，直接使用DIV2k的训练模型进行�
 | MobileFaceNet| EDSR | 0.7412 | 0.9214 | sejonface |
 | InceptionResNetV1 | EDSR | 0.7487 | 0.9335 | sejongface + div2k |
 | MobileFaceNet| EDSR | 0.7489 | 0.9207 | sejonface + div2k |
+| InceptionResNetV1 | SwinIR | 0.7442 | 0.9336 | sejongface |
+| MobileFaceNet| SwinIR | 0.7481 | 0.9182 | sejonface |
+
+实验结果发现：
+
++ 对比了不同超分模型，识别率和超分的pnsr以及ssim在一定程度区域正相关，如可见光图像的超分远比热图的结果更加好，从而，识别率也更好。
+
+**TODO**
+
+- [] 为探究预训练模型问题，尝试使用更多与人脸相关的数据集或者超分模型进行`inference`，然后进行识别。
+
+# 使用AdaFace进行识别
